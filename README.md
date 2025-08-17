@@ -1,9 +1,11 @@
-# GitHub Pages Starter
+# AniLearn Landing
 
-This folder is ready to be uploaded to your `username.github.io` repository.
+Dark, minimal landing with a big clock/greeting and a video picker (local file or direct URL for HLS `.m3u8` / `.mp4`).
 
-## How to use
-1. Create a repo named **`username.github.io`** (replace `username` with your GitHub handle).
-2. Upload these files (or push with git).
-3. Visit `https://username.github.io` to see your site.
-4. Edit `index.html` and `styles.css` to customize.
+## Deploy
+Upload these files to your repo root and enable **GitHub Pages** (Deploy from a branch, `main`, root).
+
+## Notes
+- YouTube/Netflix/etc. won't work directly due to DRM and embedding restrictions.
+- Remote files must be CORS-enabled for the browser.
+- HLS is supported via hls.js.
