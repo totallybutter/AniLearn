@@ -1,11 +1,9 @@
-# AniLearn Landing
+# AniLearn Landing v2
 
-Dark, minimal landing with a big clock/greeting and a video picker (local file or direct URL for HLS `.m3u8` / `.mp4`).
+- Player hidden until a video is loaded.
+- Video title shown above the player (file name or URL path).
+- Replace the current video by dragging & dropping a new one anywhere.
+- Subtitle panel under the player; supports two .vtt files: Japanese + English.
+- Accept subtitles via file or URL; cues are synced to the video.
 
-## Deploy
-Upload these files to your repo root and enable **GitHub Pages** (Deploy from a branch, `main`, root).
-
-## Notes
-- YouTube/Netflix/etc. won't work directly due to DRM and embedding restrictions.
-- Remote files must be CORS-enabled for the browser.
-- HLS is supported via hls.js.
+**Note on translation**: This build does *not* auto-translate on the client. For now, provide an English .vtt. We can later wire a translation API (e.g., DeepL/LibreTranslate) or add a tokenizer + dictionary for per-word glosses.
