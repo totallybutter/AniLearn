@@ -43,20 +43,25 @@
       </div>
 
       <details class="subs-config">
-        <summary>Subtitle tracks (optional)</summary>
+        <summary>Subtitles</summary>
         <div class="subs-grid">
-          <div>
-            <label>Japanese .vtt</label>
-            <input id="jpFile" type="file" accept=".vtt">
-            <input id="jpUrl" type="url" placeholder="https://example.com/japanese.vtt">
+          <div class="stack">
+            <label>Drop .vtt files here</label>
+            <div class="dropzone small" id="subsDrop">Drop .vtt files (JP/EN)</div>
           </div>
-          <div>
-            <label>English .vtt</label>
-            <input id="enFile" type="file" accept=".vtt">
-            <input id="enUrl" type="url" placeholder="https://example.com/english.vtt">
+          <div class="stack">
+            <label>Or load by URL</label>
+            <input id="subUrl1" type="url" placeholder="https://example.com/subs1.vtt">
+            <input id="subUrl2" type="url" placeholder="https://example.com/subs2.vtt (optional)">
+            <button id="loadSubs" class="btn btn-lite" type="button">Auto-detect & load</button>
           </div>
-          <button id="loadSubs" class="btn btn-lite" type="button">Load subtitles</button>
+          <div class="stack">
+            <label>Experimental</label>
+            <button id="extractBtn" class="btn btn-lite" type="button">Extract embedded subs from video</button>
+            <small class="muted">Downloads ffmpeg.wasm (~25–30 MB). Works on some MP4/MKV.</small>
+          </div>
         </div>
+        <div class="detected muted" id="detectedInfo"></div>
       </details>
 
       <div id="playerSection" class="player-section hidden">
