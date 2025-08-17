@@ -1,0 +1,2 @@
+# Optional Jekyll config to disable processing if you only serve static files
+exclude: ["README.md"]
